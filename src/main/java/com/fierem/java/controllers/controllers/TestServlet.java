@@ -16,4 +16,11 @@ public class TestServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/test/reroute.jsp").forward(request, response);
 
     }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.setAttribute("uname", request.getParameter("name"));
+        System.out.println("The passed param is: " + request.getParameter("name"));
+        request.getRequestDispatcher("/WEB-INF/test/reroute.jsp").forward(request, response);
+
+    }
 }
