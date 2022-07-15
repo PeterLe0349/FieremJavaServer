@@ -1,3 +1,5 @@
+package com.fierem.java.controllers.controllers;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -6,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name="HelloWorld", urlPatterns = "/hello")
-public class HelloWorld extends HttpServlet {
+public class HelloWorldJavaServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
