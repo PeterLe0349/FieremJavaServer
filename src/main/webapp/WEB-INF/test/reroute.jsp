@@ -7,17 +7,22 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% if(request.getAttribute("uname") == null){
+<% if(request.getAttribute("uname") == null || request.getAttribute("uname").equals("")){
     request.setAttribute("uname", "First Time Visiter");
 }
 %>
+<%! int counter = 0; %>
+<% counter++; %>
+<% if(request.getAttribute("uname").equals("reset")){
+    counter = 0;
+}%>
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp"/>
     <title>Test reroute</title>
 </head>
 <body>
-<h1 class="text-center">Test Rerouting</h1>
+<h1 class="text-center">Test Rerouting: <%= counter %></h1>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <form action="/test" method="post">
     <label for="name">Name: </label>
