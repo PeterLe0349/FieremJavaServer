@@ -18,16 +18,22 @@
 </head>
 <body>
 <h1 class="text-center">Test Rerouting</h1>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <form action="/test" method="post">
     <label for="name">Name: </label>
     <input type="text" id="name" name="name" placeholder="what's your name">
     <button type="submit">click</button>
 </form>
-
 <h4>Hello <%= request.getAttribute("uname")%></h4>
+<div class="container">
+    <div class="row">
+        <div class="col-12" id="displayMain"></div>
+    </div>
+</div>
 
 
 
 <jsp:include page="/WEB-INF/partials/bottom.jsp"/>
+<script src="../../js/movies.js"></script>
 </body>
 </html>

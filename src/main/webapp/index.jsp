@@ -13,10 +13,11 @@
 </head>
 <body>
 <jsp:include page="WEB-INF/partials/navbar.jsp"/>
-<h1>Main page default...</h1>
+<h1 class="text-center">Main page default...</h1>
 
 
 
 <jsp:include page="WEB-INF/partials/bottom.jsp"/>
+<script> </script>
 </body>
 </html>
