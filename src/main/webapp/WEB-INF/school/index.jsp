@@ -11,6 +11,7 @@
     <title>School Directory</title>
 </head>
 <body>
+<h1>School Directory</h1>
 
 </body>
 </html>
